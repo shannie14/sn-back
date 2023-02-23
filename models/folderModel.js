@@ -1,8 +1,12 @@
 const mongoose = require('mongoose');
 
 const FolderSchema = new mongoose.Schema({
-    channel: String,
-    url: String
+    channel: {
+        type: String,
+    },
+    url: {
+        type: String,
+    }
 })
 
 const Folder = mongoose.model('folders', FolderSchema);

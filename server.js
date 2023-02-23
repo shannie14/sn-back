@@ -7,9 +7,10 @@ const saleEndpoints = require('./routes/saleRoutes')
 const campaignEndpoints = require('./routes/campaignRoutes')
 const userEndpoints = require('./routes/userRoutes')
 const folderEndpoints = require('./routes/folderRoutes')
+const snguideEndpoints = require('./routes/snguideRoutes')
 
 //express app
-const app = express() 
+const app = express()
 
 //middleware
 app.use(cors({
@@ -35,6 +36,7 @@ mongoose.connect(process.env.MONGO_URI)
 app.use('/sales', saleEndpoints)
 app.use('/campaigns', campaignEndpoints)
 app.use('/users', userEndpoints)
-app.use('/folder', folderEndpoints)
+app.use('/snguides', snguideEndpoints)
+app.use('/folders', folderEndpoints)
 
 
