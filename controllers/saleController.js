@@ -106,6 +106,24 @@ const getPernod = async (req, res) => {
         .json(pernod)
 }
 
+//Proximo
+const getProximo = async (req, res) => {
+
+    const proximo = await Sale.find({ client: 'proximo' })
+
+    res.status(200)
+        .json(proximo)
+}
+
+//Tasting
+const getTasting = async (req, res) => {
+
+    const tasting = await Sale.find({ brand: 'sn' })
+
+    res.status(200)
+        .json(tasting)
+}
+
 //Waterford
 const getWaterford = async (req, res) => {
 
@@ -127,7 +145,7 @@ const getWash = async (req, res) => {
 //Whipshots
 const getWhipshots = async (req, res) => {
 
-    const whipshots = await Sale.find({ brand: 'whipshots' })
+    const whipshots = await Sale.find({ brand: 'whip' })
 
     res.status(200)
         .json(whipshots)
@@ -143,7 +161,9 @@ module.exports = {
     getJeffersons,
     getDobel,
     getPernod,
+    getProximo,
     getStranahans,
+    getTasting,
     getRoyalsalute,
     getWaterford,
     getWash,

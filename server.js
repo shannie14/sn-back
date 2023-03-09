@@ -5,9 +5,11 @@ const mongoose = require('mongoose');
 
 const saleEndpoints = require('./routes/saleRoutes')
 const campaignEndpoints = require('./routes/campaignRoutes')
+const dzEndpoints = require('./routes/dzRoutes')
 const userEndpoints = require('./routes/userRoutes')
 const folderEndpoints = require('./routes/folderRoutes')
 const snguideEndpoints = require('./routes/snguideRoutes')
+
 
 //express app
 const app = express()
@@ -35,8 +37,10 @@ mongoose.connect(process.env.MONGO_URI)
 //endpoints
 app.use('/sales', saleEndpoints)
 app.use('/campaigns', campaignEndpoints)
+app.use('/dropzones', dzEndpoints)
 app.use('/users', userEndpoints)
 app.use('/snguides', snguideEndpoints)
 app.use('/folders', folderEndpoints)
+
 
 

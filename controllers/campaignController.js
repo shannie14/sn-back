@@ -91,6 +91,15 @@ const getPernod = async (req, res) => {
         .json(pernod)
 }
 
+//Proximo
+const getProximo = async (req, res) => {
+
+    const proximo = await Campaign.find({ client: 'Proximo' })
+
+    res.status(200)
+        .json(proximo)
+}
+
 //Royalsalute
 const getRoyalsalute = async (req, res) => {
 
@@ -121,10 +130,10 @@ const getWash = async (req, res) => {
 //Whipshots
 const getWhipshots = async (req, res) => {
 
-    const wash = await Campaign.find({ client: 'WhipShots' })
+    const whip = await Campaign.find({ client: 'Starco' })
 
     res.status(200)
-        .json(wash)
+        .json(whip)
 }
 
 
@@ -138,6 +147,7 @@ module.exports = {
     getJeffersons,
     getDobel,
     getPernod,
+    getProximo,
     getStranahans,
     getRoyalsalute,
     getWaterford,

@@ -9,7 +9,9 @@ const {
     getJeffersons,
     getDobel,
     getPernod,
+    getProximo,
     getStranahans,
+    getTasting,
     getRoyalsalute,
     getWaterford,
     getWash,
@@ -27,7 +29,9 @@ router.get('/diageo', getDiageo)
 router.get('/jeffersons', getJeffersons)
 router.get('/dobel', getDobel)
 router.get('/pernod', getPernod)
+router.get('/proximo', getProximo)
 router.get('/stranahans', getStranahans)
+router.get('/tasting', getTasting)
 router.get('/royalsalute', getRoyalsalute)
 router.get('/waterford', getWaterford)
 router.get('/wash', getWash)
