@@ -4,10 +4,10 @@ const CampaignSchema = new mongoose.Schema({
     client: {
         type: String,
     },
-    campaign: {
+    brand: {
         type: String,
     },
-    date: {
+    campaign: {
         type: String,
     },
     live: {

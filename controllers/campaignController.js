@@ -82,6 +82,15 @@ const getStranahans = async (req, res) => {
         .json(stranahans)
 }
 
+//Pernod
+const getPernod = async (req, res) => {
+
+    const pernod = await Campaign.find({ brandt: 'Pernod Ricard' })
+
+    res.status(200)
+        .json(pernod)
+}
+
 //Royalsalute
 const getRoyalsalute = async (req, res) => {
 
@@ -109,6 +118,16 @@ const getWash = async (req, res) => {
         .json(wash)
 }
 
+//Whipshots
+const getWhipshots = async (req, res) => {
+
+    const wash = await Campaign.find({ client: 'WhipShots' })
+
+    res.status(200)
+        .json(wash)
+}
+
+
 module.exports = {
     getCampaign,
     getCampaigns,
@@ -118,9 +137,11 @@ module.exports = {
     getGoslings,
     getJeffersons,
     getDobel,
+    getPernod,
     getStranahans,
     getRoyalsalute,
     getWaterford,
     getWash,
+    getWhipshots
 
 }

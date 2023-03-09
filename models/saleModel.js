@@ -37,6 +37,9 @@ const SaleSchema = new mongoose.Schema({
     brand: {
         type: String,
     },
+    client: {
+        type: String,
+    },
 
 })
 
@@ -53,11 +56,10 @@ SaleSchema.index({
     units20: 'number',
     sales20: 'number',
     brand: 'text',
+    client: 'text',
 })
 
 // Mongoose automatically looks for the plural, lowercased version of your model name (1st argument)
 const Sale = mongoose.model('sales', SaleSchema);
-
-
 
 module.exports = Sale;

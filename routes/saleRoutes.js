@@ -8,10 +8,12 @@ const {
     getGoslings,
     getJeffersons,
     getDobel,
+    getPernod,
     getStranahans,
     getRoyalsalute,
     getWaterford,
-    getWash
+    getWash,
+    getWhipshots
 } = require('../controllers/saleController')
 
 const router = express.Router()
@@ -24,9 +26,11 @@ router.get('/campari', getCampari)
 router.get('/diageo', getDiageo)
 router.get('/jeffersons', getJeffersons)
 router.get('/dobel', getDobel)
+router.get('/pernod', getPernod)
 router.get('/stranahans', getStranahans)
 router.get('/royalsalute', getRoyalsalute)
 router.get('/waterford', getWaterford)
 router.get('/wash', getWash)
+router.get('/whipshots', getWhipshots)
 
 module.exports = router
