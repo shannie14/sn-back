@@ -85,7 +85,7 @@ const getStranahans = async (req, res) => {
 //Pernod
 const getPernod = async (req, res) => {
 
-    const pernod = await Campaign.find({ brandt: 'Pernod Ricard' })
+    const pernod = await Campaign.find({ client: 'Pernod Ricard' })
 
     res.status(200)
         .json(pernod)
