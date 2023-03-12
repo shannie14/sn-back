@@ -16,7 +16,7 @@ const app = express()
 
 //middleware
 app.use(cors({
-    origin: ['https://willowy-taffy-d4f8e5.netlify.app', 'http://localhost:3000', 'http://localhost:3001']
+    origin: ['https://willowy-taffy-d4f8e5.netlify.app', 'http://localhost:3000', 'http://localhost:3001', 'https://nbtv.pro/']
 }));
 app.use(express.json())
 app.use(express.urlencoded({ extended: false }))
